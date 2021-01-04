@@ -27,11 +27,16 @@ subEl.addEventListener("click", () => {
 subTenEl.addEventListener("click", () => {
     count-=10;
     updateCount();
+    if (count < 0) {
+        message = "You've gone negative!"
+        updateMessage();
+    }
 });
 
 addTenEl.addEventListener("click", () => {
     count += 10;
     updateCount();
+
     if (count >= 10) {
         message = "You've reached 10!"
         updateMessage();
@@ -44,7 +49,9 @@ addTenEl.addEventListener("click", () => {
 
 resetEl.addEventListener("click", () => {
     count = 0;
+    message = "You've reset!"
     updateCount();
+    updateMessage();
 })
 
 function updateCount() {
