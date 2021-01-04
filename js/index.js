@@ -2,6 +2,8 @@
 let numberEl = document.querySelector(".number");
 let subEl = document.querySelector(".minus");
 let addEl = document.querySelector(".plus");
+let subTenEl = document.querySelector(".minusTen");
+let addTenEl = document.querySelector(".plusTen");
 let resetEl = document.querySelector(".reset");
 
 let count = 0;
@@ -15,6 +17,16 @@ addEl.addEventListener("click", () => {
 
 subEl.addEventListener("click", () => {
     count--;
+    updateCount();
+});
+
+subTenEl.addEventListener("click", () => {
+    count-=10;
+    updateCount();
+});
+
+addTenEl.addEventListener("click", () => {
+    count += 10;
     updateCount();
 });
 
