@@ -17,20 +17,32 @@ updateMessage();
 addEl.addEventListener("click", () => {
     count++;
     updateCount();
+
+    if (count >= 0) {
+        message = "Goin' up, on a Tuesday!"
+        updateMessage();
+    }
+
 });
 
 subEl.addEventListener("click", () => {
     count--;
     updateCount();
+
+    if (count < 0) {
+        message = "Lemme see ya get low, you scared you scared!"
+        updateMessage();
+    }
 });
 
 subTenEl.addEventListener("click", () => {
     count-=10;
     updateCount();
     if (count < 0) {
-        message = "You've gone negative!"
+        message = "Gettin' down with your bad self (by tens)"
         updateMessage();
     }
+    
 });
 
 addTenEl.addEventListener("click", () => {
@@ -38,18 +50,14 @@ addTenEl.addEventListener("click", () => {
     updateCount();
 
     if (count >= 10) {
-        message = "You've reached 10!"
-        updateMessage();
-    }
-    if (count >= 100) {
-        message = "You've reached 100!"
+        message = "I'd spend ten thousand hours and ten thousand more. Oh, if that's what it takes to learn that sweet heart of yours."
         updateMessage();
     }
 });
 
 resetEl.addEventListener("click", () => {
     count = 0;
-    message = "You've reset!"
+    message = "I can see clearly now, the rain is gone. (You've reset!)"
     updateCount();
     updateMessage();
 })
@@ -57,16 +65,6 @@ resetEl.addEventListener("click", () => {
 function updateCount() {
     numberEl.innerHTML = count;
 };
-
-if (count >= 10) {
-    message = "You've reached 10!"
-    updateMessage();
-}
-
-// messageEl.addEventListener(count>=10, () => {
-//     message = "You've reached 10!"
-//     updateMessage();
-// })
 
 function updateMessage() {
     messageEl.innerHTML = message;
