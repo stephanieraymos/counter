@@ -1,6 +1,7 @@
 
 body {
-    background: -webkit-linear-gradient(pink, purple);
+    background: -webkit-linear-gradient(black, green, green, black);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .button-container {
@@ -8,9 +9,23 @@ body {
 }
 
 button {
-    border-radius: 50%;
     padding: 10px;
-    margin: 10px;
-    background-color: purple;
+    margin: 150px 5px 0 5px;
+    background-color: black;
+    color: white;
+    border: solid black 4px;
+    width: auto;
+    height: auto;
+    display: inline;
+}
+
+.number{
+    color: white;
+    border: solid white 4px;
+    margin: 5% 45% 5% 45%;
+}
+
+
+.message {
     color: white;
 }
